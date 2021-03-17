@@ -1,0 +1,10 @@
+/*
+ * Map of breakpoints, use with @include bp(<name>).
+ * Key in map is the <name> used in the mixin,
+ * value in map is a the breakpoint value.
+ */
+
+$breakpoints: (
+	L: 50em,
+	sidebar: 60em
+);

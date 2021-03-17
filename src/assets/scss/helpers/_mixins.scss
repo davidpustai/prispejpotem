@@ -1,0 +1,27 @@
+/*
+ *	Custom triangle mixin for pseudo elements
+ */
+@mixin triangle($oposite-direction, $size, $weight, $color) {
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	border: $size solid;
+	border-#{$oposite-direction}: $weight solid;
+	border-color: transparent;
+	border-#{$oposite-direction}-color: $color;
+}
+
+/*
+ * Breakpoint mixin for handeling min-width @media (inspired by https://codepen.io/chriscoyier/blog/codepens-css)
+ * Prints: @media only screen and (min-width: Xem) { ... }
+ */
+@mixin bp($breakpoint) {
+	$qry: map-get($breakpoints, $breakpoint);
+
+	@if ($qry == null) {
+		@error "There is no breakpoint '#{$breakpoint}'!";
+	}
+
+	@media only screen and (min-width: #{$qry}) { @content; }
+}

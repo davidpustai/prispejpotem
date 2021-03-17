@@ -1,0 +1,115 @@
+// =============================================================================
+// FILE IMPORTS
+// =============================================================================
+
+@import "helpers/functions";
+@import "helpers/mixins";
+@import "settings/type";
+@import "settings/sizes";
+@import "settings/media";
+@import "settings/colors";
+@import "settings/z-index";
+@import "helpers/sr-only";
+@import "helpers/base";
+
+.container {
+	display: grid;
+	grid-gap: 2em;
+	align-items: start;
+	max-width: 70em;
+	min-height: 100vh;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 1.25em;
+	font-size: 1.25rem;
+
+	@include bp(L) {
+		padding: 2.5em;
+	}
+
+	@include bp(sidebar) {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+.text {
+	max-width: 30em;
+
+	ul,
+	ol {
+		padding-left: 1.4em;
+		list-style-position: outside;
+	}
+}
+
+.title {
+	line-height: 1;
+	font-size: 3.5em;
+	font-weight: bold;
+	text-transform: uppercase;
+
+	@include bp(L) {
+		font-size: 5.5em;
+	}
+}
+
+.subtitle {
+	margin-top: .5em;
+	line-height: 1.25;
+	font-size: 1.5em;
+	font-weight: bold;
+
+	@include bp(L) {
+		font-size: 2.25em;
+	}
+
+	+ p {
+		margin-top: 1.5em;
+	}
+}
+
+.cta {
+	margin-top: .75em;
+	line-height: 1.25;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-transform: uppercase;
+
+	@include bp(L) {
+		font-size: 2.25em;
+	}
+
+	+ * {
+		margin-top: .5em;
+	}
+}
+
+.section-title {
+	max-width: 15em;
+	margin-top: 1.5em;
+	line-height: 1.45;
+	font-size: 1.125em;
+	font-weight: bold;
+	text-transform: uppercase;
+
+	@include bp(L) {
+		font-size: 1.5em;
+	}
+
+	+ * {
+		margin-top: .75em;
+	}
+}
+
+.gallery {
+	position: sticky;
+	display: grid;
+	grid-gap: 1em;
+
+	@include bp(L) {
+		grid-gap: 2em;
+	}
+}
+
+@import "helpers/shame";
