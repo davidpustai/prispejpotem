@@ -36,10 +36,14 @@
 .text {
 	max-width: 30em;
 
-	ul,
 	ol {
 		padding-left: 1.4em;
 		list-style-position: outside;
+	}
+
+	ul {
+		padding-left: 0;
+		list-style: none;
 	}
 }
 
@@ -109,6 +113,10 @@
 
 	@include bp(L) {
 		grid-gap: 2em;
+	}
+
+	img {
+		border: 5px solid #fff;
 	}
 }
 
