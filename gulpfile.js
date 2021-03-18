@@ -143,6 +143,7 @@ const img = () => gulp.src('src/assets/img/**/*.{gif,jpg,png,svg}')
 // COPY FILES
 // ===============================================================
 const copyMisc = () => gulp.src([
+							'src/.htacce',
 							'src/robots.txt',
 							'src/browserconfig.xml',
 							'src/*.{ico,png,svg}', // icons
@@ -154,14 +155,8 @@ const copyMisc = () => gulp.src([
 						.pipe(gulp.dest(DEST))
 						.pipe($.connect.reload());
 
-const copyModules = () => gulp.src([
-								'node_modules/apache-server-configs/dist/.htaccess'
-							])
-							.pipe(gulp.dest(DEST));
-
 const copy = gulp.parallel(
-	copyMisc,
-	copyModules
+	copyMisc
 );
 
 // ===============================================================
