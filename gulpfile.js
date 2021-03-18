@@ -143,7 +143,7 @@ const img = () => gulp.src('src/assets/img/**/*.{gif,jpg,png,svg}')
 // COPY FILES
 // ===============================================================
 const copyMisc = () => gulp.src([
-							'src/.htacce',
+							'src/.htaccess',
 							'src/robots.txt',
 							'src/browserconfig.xml',
 							'src/*.{ico,png,svg}', // icons
