@@ -87,6 +87,28 @@ a {
 	}
 }
 
+.stats {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 0 1.5em;
+	align-items: end;
+	max-width: 21em;
+	margin-top: 1.5em;
+
+	dt {
+		margin-bottom: .125em;
+	}
+
+	dd {
+		font-size: 1.25em;
+		font-weight: bold;
+	}
+
+	abbr {
+		text-decoration: none;
+	}
+}
+
 .cta {
 	margin-top: .75em;
 	line-height: 1.25;
