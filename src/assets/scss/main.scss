@@ -65,6 +65,11 @@ a {
 	@include bp(L) {
 		font-size: 5.5em;
 	}
+
+	img {
+		width: 4.5em;
+		margin-bottom: .125em;
+	}
 }
 
 .subtitle {
@@ -122,6 +127,10 @@ a {
 
 	@include bp(L) {
 		grid-gap: 2em;
+	}
+
+	@include bp(sidebar) {
+		margin-top: 1.85em;
 	}
 
 	img {
