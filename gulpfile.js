@@ -165,7 +165,11 @@ const copy = gulp.parallel(
 const html = () => {
 	return gulp.src('src/templates/pages/**/*.twig')
 		.pipe($.twig({
-			data: {},
+			data: {
+				icons: {
+					instagram: fs.readFileSync('src/assets/img/mdi-icons/instagram.svg')
+				}
+			},
 			errorLogToConsole: true,
 			extname: '.html'
 		}))
